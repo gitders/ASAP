@@ -340,7 +340,6 @@ def welltime(WW,tdr,dt=0.001,ztop=None,zbot=None,name=None,tops=None,qcplot=True
                     ax[1].text(x=plotmax,y=d2t(topz),s=topn,**format_tops)
         if name is not None:
             plt.suptitle(name, **format_title)
-        # plt.subplots_adjust(right=0.7,bottom=0.15)
         plt.tight_layout()
     return WWt,float(d2t(ztop)),float(d2t(zbot))
 
@@ -456,9 +455,5 @@ def quicklook(WW,ztop=None,zbot=None,name=None,tops=None):
                     if i is 3: # plot top name also on last column
                         aa.text(x=rlims[1]+rlims[1]*.01,y=topz,s=topn,**format_tops)
     if name is not None:
-        # plt.suptitle(name, **format_title_topright)
         plt.suptitle(name, **format_title)
     ax[0].set_ylim(zbot,ztop)   
-    # plt.tight_layout()
-
-    # plt.subplots_adjust(hspace=.05,top=.9,bottom=.1,left=.08,right=.98)
